@@ -16,14 +16,14 @@ module.exports = (sequelize, Model, DataTypes) => {
         },
       },
       headers: {
-        type: DataTypes.ARRAY(DataTypes.STRING),
+        type: DataTypes.JSON,
         allowNull: false,
         validate: {
           notEmpty: true,
         },
       },
       rows: {
-        type: DataTypes.ARRAY(DataTypes.JSON),
+        type: DataTypes.JSON,
         allowNull: false,
         validate: {
           notEmpty: true,

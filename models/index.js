@@ -13,8 +13,14 @@ const sequelize = new Sequelize(
 
 const User = require("./User")(sequelize, Model, DataTypes);
 const Todo = require("./Todo")(sequelize, Model, DataTypes);
+const Note = require("./Note")(sequelize, Model, DataTypes);
+const Table = require("./Table")(sequelize, Model, DataTypes);
 
 User.hasMany(Todo);
+User.hasMany(Note);
+User.hasMany(Table);
 Todo.belongsTo(User);
+Note.belongsTo(User);
+Table.belongsTo(User);
 
-module.exports = { sequelize, User, Todo };
+module.exports = { sequelize, User, Todo, Note, Table };
