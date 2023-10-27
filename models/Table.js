@@ -15,14 +15,7 @@ module.exports = (sequelize, Model, DataTypes) => {
           notEmpty: true,
         },
       },
-      headers: {
-        type: DataTypes.JSON,
-        allowNull: false,
-        validate: {
-          notEmpty: true,
-        },
-      },
-      rows: {
+      table: {
         type: DataTypes.JSON,
         allowNull: false,
         validate: {

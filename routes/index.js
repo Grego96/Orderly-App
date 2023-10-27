@@ -1,7 +1,7 @@
 const userRoutes = require("./userRoutes");
-// const todoRoutes = require("./todoRoutes");
+const tableRoutes = require("./tableRoutes");
 
 module.exports = (app) => {
   app.use(userRoutes);
-  // app.use(todoRoutes);
+  app.use(tableRoutes);
 };
